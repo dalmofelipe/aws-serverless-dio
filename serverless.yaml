@@ -42,6 +42,12 @@ functions:
       - httpApi:
           path: /items/{id}
           method: get
+  updateItem:
+    handler: src/update-item.handler
+    events:
+      - httpApi:
+          path: /items/{id}
+          method: put
 
 resources:
   Resources:

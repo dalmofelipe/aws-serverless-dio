@@ -14,7 +14,7 @@ module.exports.handler = async event => {
         id, 
         item, 
         createdAt, 
-        ItemStatus: false
+        itemStatus: false
     }
 
     let result = await dynamoDB.put(
