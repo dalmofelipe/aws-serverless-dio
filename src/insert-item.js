@@ -17,16 +17,16 @@ module.exports.handler = async event => {
         ItemStatus: false
     }
 
-    await dynamoDB.put(
+    let result = await dynamoDB.put(
         {
             TableName: 'ItemTableNew',
             Item: newItem 
         }
-    )
+    ).promise()
 
     return {
+        result,
         statusCode: 200,
         body: JSON.stringify(newItem)
     }
 }
-
