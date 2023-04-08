@@ -7,7 +7,7 @@ POST https://7f3znsg8l1.execute-api.us-east-1.amazonaws.com/items HTTP/1.1
 Content-Type: application/json
 
 {
-    "item": "iMac Pro Max Retina 27"
+    "item": "Xiomi RedNote 7 Pro Global Neptune"
 }
 
 ### get all items
@@ -26,3 +26,6 @@ Content-Type: application/json
     "item": "IKeyBoard 10 Promax Plus",
     "itemStatus": true
 }
+
+### delete item
+DELETE https://7f3znsg8l1.execute-api.us-east-1.amazonaws.com/items/78c5308a-76c4-4a77-a7c9-0185eb9e3cc0 HTTP/1.1

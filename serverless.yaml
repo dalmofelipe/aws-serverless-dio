@@ -14,6 +14,7 @@ provider:
             - dynamoDB:UpdateItem
             - dynamoDB:GetItem
             - dynamoDB:Scan
+            - dynamodb:DeleteItem
           Resource:
             - arn:aws:dynamodb:us-east-1:775521589093:table/ItemTableNew
 
@@ -48,6 +49,12 @@ functions:
       - httpApi:
           path: /items/{id}
           method: put
+  deleteItem:
+    handler: src/delete-item.handler
+    events:
+      - httpApi:
+          path: /items/{id}
+          method: delete
 
 resources:
   Resources:
