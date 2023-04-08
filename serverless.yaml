@@ -24,6 +24,12 @@ functions:
       - httpApi:
           path: /
           method: get
+  insertItem:
+    handler: src/insert-item.handler
+    events:
+      - httpApi:
+          path: /items
+          method: post
 
 resources:
   Resources:
